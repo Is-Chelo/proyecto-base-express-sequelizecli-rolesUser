@@ -20,25 +20,8 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+     await queryInterface.bulkDelete("rolesModulos", null, {});
+
   },
 };
 
-const rolesModulos = async () => {
-  // await rolesModulo.create({
-  //   idModulo: i,
-  //   idRol: 1,
-  //   okSelect: 1,
-  //   okUpdate: 1,
-  //   okInsert: 1,
-  //   okDelete: 1,
-  //   createdAt: new Date(),
-  //   updatedAt: new Date(),
-  // });
-  return data;
-};
