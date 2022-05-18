@@ -11,7 +11,7 @@ module.exports = {
       idModulo: {
         type: Sequelize.INTEGER,
         references: {
-          model: "modulos",
+          model: "Modulos",
           key: "id",
         },
         onDelete: "SET NULL",
@@ -20,7 +20,7 @@ module.exports = {
       idRol: {
         type: Sequelize.INTEGER,
         references: {
-          model: "roles",
+          model: "Roles",
           key: "id",
         },
         onDelete: "SET NULL",

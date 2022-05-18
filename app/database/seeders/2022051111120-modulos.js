@@ -1,67 +1,110 @@
 "use strict";
-const { rolesModulo } = require("../../models/index");
+// const { rolesModulo } = require("../../models/index");
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.bulkInsert("modulos", modulos);
-    for (let i = 1; i <= modulos.length; i++)
-      await rolesModulo.create({
-        idModulo: i,
-        idRol: 1,
-        okSelect: 1,
-        okUpdate: 1,
-        okInsert: 1,
-        okDelete: 1,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      });
+    await queryInterface.bulkInsert("Modulos", modulos);
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete("modulos", null, {});
+    await queryInterface.bulkDelete("Modulos", null, {});
   },
 };
 
 const modulos = [
   {
-    nombre: "Modulo Materias",
-    url: "/api/v1/materias",
+    nombre: "Modulo Arbitro",
+    url: "/api/v1/arbitro",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    nombre: "Modulo Profesores",
-    url: "/api/v1/profesores",
+    nombre: "Modulo Jugador",
+    url: "/api/v1/jugador",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    nombre: "Modulo Cursos",
-    url: "/api/v1/cursos",
+    nombre: "Modulo Persona acargo",
+    url: "/api/v1/personaCargo",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    nombre: "Modulo Horarios",
-    url: "/api/v1/horarios",
+    nombre: "Modulo Planillero",
+    url: "/api/v1/planillero",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    nombre: "Modulo Estudiantes",
-    url: "/api/v1/estudiantes",
+    nombre: "Modulo Incripcion Jugador",
+    url: "/api/v1/inscripcionJugador",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    nombre: "Modulo Calificaciones",
-    url: "/api/v1/estudiantes",
+    nombre: "Modulo Arbitro Partido",
+    url: "/api/v1/arbitroPartido",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    nombre: "Modulo Tutores",
-    url: "/api/v1/tutores",
+    nombre: "Modulo Detalle Partido",
+    url: "/api/v1/detallePartido",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    nombre: "Modulo Categoria",
+    url: "/api/v1/categoria",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    nombre: "Modulo Equipo",
+    url: "/api/v1/equipo",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    nombre: "Modulo Pago",
+    url: "/api/v1/pago",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    nombre: "Modulo Motivo Pago",
+    url: "/api/v1/motivoPago",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    nombre: "Modulo Inscripcion",
+    url: "/api/v1/inscripcion",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    nombre: "Modulo Torneo",
+    url: "/api/v1/torneo",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    nombre: "Modulo Campo Deportivo",
+    url: "/api/v1/campoDeportivo",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    nombre: "Modulo Campo Juegos",
+    url: "/api/v1/juegos",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    nombre: "Modulo Observaciones",
+    url: "/api/v1/observaciones",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
