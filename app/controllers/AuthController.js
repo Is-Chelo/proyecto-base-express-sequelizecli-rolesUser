@@ -78,7 +78,7 @@ module.exports = {
           expiresIn: "4h",
         }
       );
-      return res.status(404).json({
+      return res.status(200).json({
         token: tokenUser,
         id: userExiste.id,
         nombre: userExiste.nombre,
