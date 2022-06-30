@@ -86,6 +86,10 @@ module.exports = {
         correo: userExiste.correo,
         rol: userExiste.idRol,
       });
+    }else{
+      res.status(404).json({
+        message:"La contraseña no coincide..."
+      })
     }
     // TODO devolvemos el json
   },
